@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - github.com/polarbookshop/catalog-service/k8s?ref=main
+  - github.com/antonsaurytski83/catalog-service/k8s?ref=master
 
 patchesStrategicMerge:
   - patch-env.yml
@@ -17,7 +17,7 @@ configMapGenerator:
 
 images:
   - name: catalog-service
-    newName: ghcr.io/polarbookshop/catalog-service
+    newName: ghcr.io/antonsaurytski83/catalog-service
     newTag: latest
 
 replicas:
